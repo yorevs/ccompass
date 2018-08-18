@@ -1,0 +1,11 @@
+TODOS
+
+ Created on: Dec 20, 2011
+     Author: yorevs
+
+- Tirar o erro (HashMap.c:83): error: nested functions are disabled.
+- Homogenizar os espacos ou tabs.
+- Rever os comentarios de todas as classes.
+- Incluir assert em todos os "Required" parametros.
+- Trocar os prefixos m_* por _*
+- Consertar o RegExp para com os grupos e alternates ()|()
