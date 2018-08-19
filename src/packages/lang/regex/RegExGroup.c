@@ -30,7 +30,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#include "CRSwE.h"
+#include "Compass.h"
 #include "RegExGroup.h"
 /* --------------------------------------------------------------------------*/
 

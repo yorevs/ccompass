@@ -29,7 +29,7 @@
 #define NFASTATE_H_
 
 /* Includes ----------------------------------------------------------------- */
-#include "CRSwE.h"
+#include "Compass.h"
 #include "ArrayList.h"
 #include "NFAEntry.h"
 /* -------------------------------------------------------------------------- */

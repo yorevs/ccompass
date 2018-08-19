@@ -31,7 +31,7 @@
 #include <assert.h>
 #include <string.h>
 
-#include "CRSwE.h"
+#include "Compass.h"
 #include "HashMap.h"
 /* --------------------------------------------------------------------------*/
 

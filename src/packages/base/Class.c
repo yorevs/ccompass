@@ -1,7 +1,7 @@
 /*******************************************************************************
 * Project:        CRSwE_Library_V_1_0_Beta
 * File:           Class.c
-* Purpose:        Implement functions to TODO: Describe purpose here
+* Purpose:        Implement functions to provide a "Class" like struct
 * Author:         Hugo Saporetti Junior
 * Creation date:  Jul 29, 2008
 * ANSI:           yes

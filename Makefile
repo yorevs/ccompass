@@ -67,7 +67,7 @@ SHELL         := /bin/bash
 # .ui    ; User Interface file (GUI)
 # .moc   ; Meta-Object Compiler
 .SUFFIXES:
-.SUFFIXES: .c .h .o .cpp .hpp .obj .ui .moc .qrc
+.SUFFIXES: .c .h .o .cpp .hpp .obj .ui .moc .qrc .a .so
 
 
 #### Include version control targets ####
@@ -83,7 +83,7 @@ topdir        ?= $(BASE_DIR)
 
 # Sources and objects.
 srctree       := $(topdir)/src/packages
-builddir      := $(topdir)/.dbg
+builddir      := $(topdir)/build
 objtree       := $(builddir)/bin
 distdir       := $(topdir)/dist
 INSTALL_DIR   := 
@@ -175,7 +175,7 @@ endif
 
 
 ### Include cross compilation stuff.
--include xcc.in
+-include xcc.mk
 
 # If case cross compilation stuff was not included.
 ifndef CROSS_COMPILE
@@ -189,8 +189,8 @@ endif
 ### Test Applications
 # Choose which test application to compile (or all). Check sample dirs for
 # options, e.g:
-#  - base_Test: make test-all STAPP=base
-#  - string_Test: make test-all STAPP=string
+#  - base_Test: make test STAPP=base
+#  - string_Test: make test STAPP=string
 # "_Test" is appended automatically.
 
 # Sample file namming convention. Changing this will impact target leak-check.
@@ -408,7 +408,7 @@ distclean: uninstall $(QT_CLEAN)
 
 TLIBS=-lcrswe -lm
 
-test-all: clean all
+test: clean all
 	@echo "[$@] Building all tests from sample dirs ..."
 	@echo ' '
 	$(VERBOSE)for x in $(basename $(TEST_SRCS)); do \
@@ -442,7 +442,7 @@ $(REPORT): clean-reports
 	@echo ' '
 	@valgrind --leak-check=full $(objtree)/$(sdirs)/$(STAPP)_Test 2> $@
 
-leak-check: test-all $(REPORT)
+leak-check: test $(REPORT)
 ifneq "$(STAPP)" ""
 	@echo ' '
 	@echo "[$@] Memory leak check complete. See summary below: "
@@ -463,7 +463,7 @@ clean-tests:
 # ---------------------------------------------------------------------------- 
 ### PHONY targets.
 .PHONY: all init pre-build post-build all-target dist clean distclean \
-install uninstall gencdoc test-all leak-check clean-tests \
+install uninstall gencdoc test leak-check clean-tests \
 
 
 #### END OF MAKEFILE ####

@@ -1,7 +1,7 @@
 /*******************************************************************************
 * Project:        C-Compass 1.0.0
-* File:           CRSwE.h
-* Purpose:        Prototypes for CRSwE.c functions
+* File:           Compass.h
+* Purpose:        Prototypes for COMPASS.c functions
 * Author:         Hugo Saporetti Junior
 * Creation date:  Sep 2, 2009
 * ANSI:           yes
@@ -25,11 +25,11 @@
 * You should have received a copy of the GNU Lesser General Public License
 * along with C-Compass Library. If not, see <http://www.gnu.org/licenses />.
 ******************************************************************************/
-#ifndef CRSWE_H_
-#define CRSWE_H_
+#ifndef COMPASS_H_
+#define COMPASS_H_
 
 #ifdef __cplusplus
-#error A C++ compiler is not supported by this version o C-Compass Library!
+#error A C++ compiler is not supported by this version of C-Compass Library!
 #endif
 
 /* Includes ---------------------------------------------------------------- */
@@ -41,5 +41,5 @@
 /* ------------------------------------------------------------------------- */
 
 
-#endif /* CRSWE_H_ */
+#endif /* COMPASS_H_ */
 

@@ -29,7 +29,7 @@
 #define LISTENTRY_H_
 
 /* Includes ----------------------------------------------------------------- */
-#include "CRSwE.h"
+#include "Compass.h"
 /* -------------------------------------------------------------------------- */
 
 /* Usefull Macro to shorcut the constructor method */

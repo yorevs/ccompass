@@ -33,7 +33,7 @@
 #include <errno.h>
 #include <setjmp.h>
 
-#include "CRSwE.h"
+#include "Compass.h"
 #include "String.h"
 /* -------------------------------------------------------------------------- */
 

@@ -38,7 +38,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "CRSwE.h"
+#include "Compass.h"
 #include "RegEx.h"
 #include "String.h"
 /* --------------------------------------------------------------------------*/

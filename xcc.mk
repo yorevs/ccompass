@@ -42,4 +42,3 @@ LD          := $(ARCH_LD)
 AR          := $(ARCH_AR)
 STRIP       := $(ARCH_STRIP)
 endif
-

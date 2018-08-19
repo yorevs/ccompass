@@ -32,7 +32,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "CRSwE.h"
+#include "Compass.h"
 #include "Exception.h"
 #include "RegEx.h"
 /* ------------------------------------------------------------------------- */

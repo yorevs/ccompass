@@ -43,6 +43,7 @@ nbdist/
 *.a
 *.so
 *.pyc
+*.dSYM/
 
 # Packages #
 ############

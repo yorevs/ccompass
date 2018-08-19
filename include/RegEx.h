@@ -31,7 +31,7 @@
 /* Includes ----------------------------------------------------------------- */
 #include <ctype.h>
 
-#include "CRSwE.h"
+#include "Compass.h"
 #include "String.h"
 #include "NFAEntry.h"
 #include "NFAState.h"
