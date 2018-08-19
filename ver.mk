@@ -1,6 +1,6 @@
 ###############################################################################
 # Description: Linux Makefile Version Control extension for C-Compass Library
-# Author: hugo
+# Author: Hugo Saporetti Junior
 # Create Date: Jan, 23 2012
 # Version: 1.0
 # -----------------------------------------------------------------------------
