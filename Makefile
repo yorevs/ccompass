@@ -425,7 +425,10 @@ test: clean all
 		$(CC) -L"$(libdir)" -I"$(includedir)" \
 		$(CFLAGS) -o "$$next" $$x.c $(TLIBS) ;\
 		echo "[$$next] Finished building target: $$next" ;\
-		$(MV) $$next $(objtree)/$(sdirs) ;\
+		if [ -f $$next ] ;\
+		then \
+			$(MV) $$next $(objtree)/$(sdirs) ;\
+		fi ;\
 		echo ' ' ;\
 	done
 	@echo '[$@] Done.'
@@ -463,7 +466,7 @@ clean-tests:
 # ---------------------------------------------------------------------------- 
 ### PHONY targets.
 .PHONY: all init pre-build post-build all-target dist clean distclean \
-install uninstall gencdoc test leak-check clean-tests \
+install uninstall gencdoc test leak-check clean-reports clean-tests \
 
 
 #### END OF MAKEFILE ####
