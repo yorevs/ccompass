@@ -433,8 +433,7 @@ test: clean all
 		echo ' ' ;\
 		if [ -d $$next.dSYM ] ;\
 		then \
-			test -d && rm -rf $(builddir)/$$next.dSYM ;\
-			$(MV) -f $$next.dSYM $(builddir) ;\
+			$(RM) -rf $$next.dSYM ;\
 		fi ;\
 	done
 	@echo '[$@] Done.'
