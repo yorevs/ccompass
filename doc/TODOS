@@ -1,7 +1,7 @@
 TODOS
 
  Created on: Dec 20, 2011
-     Author: yorevs
+     Author: Hugo Saporetti Junior
 
 - Tirar o erro (HashMap.c:83): error: nested functions are disabled.
 - Homogenizar os espacos ou tabs.

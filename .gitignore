@@ -40,6 +40,7 @@ nbdist/
 *.dll
 *.exe
 *.o
+*.a
 *.so
 *.pyc
 
