@@ -51,7 +51,7 @@ $(VERSION_FILE): $(C_OBJS)
 
 # Version. Increment if any object file changes.
 version: $(VERSION_FILE)
-	$(MAKE) revision
+	@make buildnum
 	@echo "### Last modified: $(BUILD_DATE)" >> $(VERSION_FILE)
 	@echo "### Automatically generated. Do not edit !" >>$(VERSION_FILE)
 
@@ -80,7 +80,7 @@ buildnum: $(VERSION_FILE)
 	@make ver
 
 # Check the current version.
-ver:
+ver: $(VERSION_FILE)
 	@echo '[$@] Current version is: $(shell head -1 $(VERSION_FILE))'
 
 # ---------------------------------------------------------------------------- 
