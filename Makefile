@@ -152,9 +152,10 @@ vpath %.h $(srctree):$(foreach dir,$(SUBDIRS),$(dir):)
 # --no-keep-going => Stop making on the first error.
 #
 DBG_CFLAGS    := -O0 -g3
-WRN_CFLAGS    := -Wall -Wfatal-errors
+WRN_CFLAGS    := -Wall -Wfatal-errors -Wimplicit-function-declaration
 STD_FLAGS     := -ansi -std=c99
-CFLAGS        := $(DBG_CFLAGS) $(WRN_CFLAGS) $(STD_FLAGS) -fmessage-length=0
+SAFETY_FLAGS  := -fsanitize=safe-stack
+CFLAGS        := $(DBG_CFLAGS) $(WRN_CFLAGS) $(STD_FLAGS) -fmessage-length=0 
 ARFLAGS       := -s -c
 LDFLAGS       := 
 MAKEFLAGS     += --no-print-directory --no-keep-going

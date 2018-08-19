@@ -56,7 +56,9 @@
  * occur in that code.
  */
 #define TRY(code)           if (SAVE_PROG_STATE == 0) { \
-                                code \
+                                void __try_block__() { \
+                                    code \
+                                } __try_block__(); \
                             } \
 
 /**
@@ -65,10 +67,12 @@
  * occur in that code.
  */
 #define CATCH(tp, e, code)  if (Runtime.resultRestore == tp) { \
-                                System.out.printDebug(DBG_ERROR, "[Exception] Exception caught (line:%d)", __LINE__); \
-                                e = (Exception*)Runtime.ex.lastException; \
-                                Runtime.ex.lastException->m_wasCaught = true; \
-                                code \
+                                void __catch_block__() { \
+                                    System.out.printDebug(DBG_ERROR, "[Exception] Exception caught (line:%d)", __LINE__); \
+                                    e = (Exception*)Runtime.ex.lastException; \
+                                    Runtime.ex.lastException->m_wasCaught = true; \
+                                    code \
+                                } __catch_block__(); \
                             } \
 
 /** TODO Comment */
