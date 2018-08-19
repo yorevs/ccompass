@@ -4,7 +4,7 @@
 # Create Date: Aug, 3rd 2009
 # Version: 4.0
 # ----------------------------------------------------------------------------
-# Developed by ICC-SWE 
+# Developed by Hugo Saporetti Junior 
 # Access: https://github.com/yorevs/ccompass
 # Copyright (C) 2018 Hugo Saporetti Junior
 # ----------------------------------------------------------------------------
@@ -211,7 +211,7 @@ MV            := mv
 CP            := cp
 FIND          := find
 DOC_TOOL      := doxygen
-TOOLCHECK     := $(scriptdir)/toolschecker.sh
+TOOLCHECK     := $(scriptdir)/toolcheck.sh
 
 
 # ---------------------------------------------------------------------------- 

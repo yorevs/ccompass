@@ -4,7 +4,7 @@
 # Create Date: Jan, 23 2012
 # Version: 1.0
 # -----------------------------------------------------------------------------
-# Developed by ICC-SWE 
+# Developed by Hugo Saporetti Junior 
 # Access: https://github.com/yorevs/ccompass
 # Copyright (C) 2018 Hugo Saporetti Junior
 # -----------------------------------------------------------------------------
