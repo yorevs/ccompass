@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Project:        CRSwE_Library_V_1_0_Beta
+ * Project:        C-Compass
  * File:           Class.h
  * Purpose:        Prototypes for Class.c functions
  * Author:         Hugo Saporetti Junior

@@ -47,7 +47,7 @@
 
 
 # Project name. Used on distribution file name.
-PRJ_NAME      := crswe
+PRJ_NAME      := compass
 
 # ---------------------------------------------------------------------------- 
 ### General Conventions section.
@@ -345,7 +345,7 @@ dist: all docgen
 	@$(CP) $(docdir) $(DISTNAME)
 	@-${RM} -f $(shell find $(DISTNAME) -name "CVS*")
 	@echo "#### Files include on v$(VERSION) distribution:\n\n" > FILES
-	@find $(DISTNAME) -type f -name "*.*" | sort | sed 's_\(.*/crswe/\)_./_' >> FILES
+	@find $(DISTNAME) -type f -name "*.*" | sort | sed 's_\(.*/compass/\)_./_' >> FILES
 	@$(MV) $(BASE_DIR)/FILES $(DISTNAME)
 	@tar -czf $(DISTNAME).tar.gz $(subst $(BASE_DIR)/, , $(DISTNAME)/*)
 	@echo '[$@] $(DISTNAME).tar.gz successfully packed !!!'
@@ -407,7 +407,7 @@ distclean: uninstall $(QT_CLEAN)
 
 ### Sample targets
 
-TLIBS=-lcrswe -lm
+TLIBS=-lcompass -lm
 
 test: clean all
 	@echo "[$@] Building all tests from sample dirs ..."
@@ -431,6 +431,11 @@ test: clean all
 			$(MV) $$next $(objtree)/$(sdirs) ;\
 		fi ;\
 		echo ' ' ;\
+		if [ -d $$next.dSYM ] ;\
+		then \
+			test -d && rm -rf $(builddir)/$$next.dSYM ;\
+			$(MV) -f $$next.dSYM $(builddir) ;\
+		fi ;\
 	done
 	@echo '[$@] Done.'
 	@echo ' '

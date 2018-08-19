@@ -28,6 +28,7 @@
 
 /* Includes ---------------------------------------------------------------- */
 #include "Compass.h"
+#include "String.h"
 #include "Exception.h"
 #include "HashMap.h"
 /* ------------------------------------------------------------------------- */
@@ -35,26 +36,24 @@
 /* Defines ----------------------------------------------------------------- */
 /*#define NDEBUG*/
 
-#define stats_HashMap(map)    if (true) { \
-                              void _stats_HashMap_(HashMap *map) { \
-                                if (!map) { \
-                                  return; \
-                                } \
-                                void _hm_stats_(MapNode *node) { \
-                                  if (!node) { \
-                                    return; \
-                                  } \
-                                  printf("Key: \"%s\", Value: \"%s\", ID: %lu\n", \
-                                    node->m_key->m_text, toString(node->m_value), node->m_id \
-                                  ); \
-                                  _hm_stats_(node->m_left); \
-                                  _hm_stats_(node->m_right); \
-                                } \
-                                _hm_stats_(map->m_root); \
-                              } \
-                              _stats_HashMap_(map);}
 
 /* ------------------------------------------------------------------------- */
+void hmStats( MapNode *node ) {
+    if ( !node ) {
+        return;
+    }
+    printf( "Key: \"%s\", Value: \"%s\", ID: %lu\n", node->m_key->m_text, toString( node->m_value ), node->m_id );
+    hmStats( node->m_left );
+    hmStats( node->m_right );
+}
+
+void statsHashMap( HashMap *map ) {
+    if ( !map ) {
+        return;
+    }
+
+    hmStats( map->m_root );
+} \
 
 void testHashMap( void ) {
 	HashMap *hmap = HashMap();
@@ -75,11 +74,11 @@ void testHashMap( void ) {
 	myClone = clone( hmap );
 
 	System.out.println( "Listing %d elements from original HashMap ...\n", hmap->size( hmap ) );
-	stats_HashMap( hmap );
+	statsHashMap( hmap );
 	System.out.println("\n");
 
 	System.out.println("Listing %d elements from cloned HashMap ...\n", myClone->size( myClone ) );
-	stats_HashMap( myClone );
+	statsHashMap( myClone );
 	System.out.println("\n");
 
 	delete( myClone );

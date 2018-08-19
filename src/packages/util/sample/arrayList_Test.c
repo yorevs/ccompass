@@ -28,6 +28,7 @@
 
 /* Includes ---------------------------------------------------------------- */
 #include "Compass.h"
+#include "String.h"
 #include "Exception.h"
 #include "ArrayList.h"
 /* ------------------------------------------------------------------------- */
@@ -35,15 +36,15 @@
 /* Defines ----------------------------------------------------------------- */
 /*#define NDEBUG*/
 
-#define stats_array(list)     if (true) { \
-                              void statsArray() { \
-                                ListEntry *entry = list->m_head; \
-                                while(entry != null) { \
-                                  System.out.println("%s", toString(entry)); \
-                                  entry = entry->m_next; \
-                                } \
-                              }statsArray();}
 /* ------------------------------------------------------------------------- */
+
+void statsArray(ArrayList *list) {
+    ListEntry *entry = list->m_head;
+    while( entry != null ) {
+        System.out.println( "%s", toString( entry ) );
+        entry = entry->m_next;
+    }
+}
 
 void testArrayList(void) {
   ArrayList *list = ArrayList();
@@ -68,11 +69,11 @@ void testArrayList(void) {
 
   myclone = clone(list);
 
-  stats_array(myclone);
+  statsArray(myclone);
 
-  stats_array(list);
+  statsArray(list);
   list->clear(list);
-  stats_array(list);
+  statsArray(list);
 
   delete(myclone);
   delete(list);

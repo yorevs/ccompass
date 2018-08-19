@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Project:        CRSwE_Library_V_1_0_Beta
+* Project:        C-Compass
 * File:           Class.c
 * Purpose:        Implement functions to provide a "Class" like struct
 * Author:         Hugo Saporetti Junior
