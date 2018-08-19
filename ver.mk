@@ -1,12 +1,12 @@
 ###############################################################################
-# Description: Linux Makefile Version Control extension for CRSwE Library
+# Description: Linux Makefile Version Control extension for C-Compass Library
 # Author: hugo
 # Create Date: Jan, 23 2012
 # Version: 1.0
 # -----------------------------------------------------------------------------
 # Developed by ICC-SWE 
-# Access: http://crswe.inatel.br/iccforum
-# Copyright (C) 2012 Inatel Competence Center - Software Development/CRSwE.
+# Access: https://github.com/yorevs/ccompass
+# Copyright (C) 2018 Hugo Saporetti Junior
 # -----------------------------------------------------------------------------
 
 # Version control file.

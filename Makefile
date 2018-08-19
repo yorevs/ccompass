@@ -1,12 +1,12 @@
 ###############################################################################
-# Description: Linux Makefile for CRSwE Library
+# Description: Linux Makefile for C-Compass Library
 # Author: Hugo Saporetti Junior
 # Create Date: Aug, 3rd 2009
 # Version: 4.0
 # ----------------------------------------------------------------------------
 # Developed by ICC-SWE 
-# Access: http://crswe.inatel.br/iccforum
-# Copyright (C) 2011 Inatel Competence Center - Software Development/CRSwE.
+# Access: https://github.com/yorevs/ccompass
+# Copyright (C) 2018 Hugo Saporetti Junior
 # ----------------------------------------------------------------------------
 # Targets:
 #

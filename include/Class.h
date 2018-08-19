@@ -6,24 +6,24 @@
  * Creation date:  Jul 4, 2008
  * ANSI:           yes
  * -----------------------------------------------------------------------------
- * Developed by: ICC-SWE
- * Access: http://crswe.inatel.br/iccforum
- * Copyright (C) 2008 Inatel Competence Center - Software Development/CRSwE.
+ * Developed by: Hugo Saporetti Junior
+ * Access: https://github.com/yorevs/ccompass
+ * Copyright (C) 2018 Hugo Saporetti Junior
  *
- * This file is part of CRSwE Library.
+ * This file is part of C-Compass Library.
  *
- * CRSwE Library is free software: you can redistribute it and/or modify
+ * C-Compass Library is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published
  * by the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * CRSwE Library is distributed in the hope that it will be useful, but
+ * C-Compass Library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with CRSwE Library. If not, see <http://www.gnu.org/licenses />.
+ * along with C-Compass Library. If not, see <http://www.gnu.org/licenses />.
  ******************************************************************************/
 #ifndef CLASS_H_
 #define CLASS_H_
