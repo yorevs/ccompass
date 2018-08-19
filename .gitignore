@@ -58,10 +58,11 @@ valgrind-report.txt
 *.tar
 *.zip
 
-# Logs and databases #
+# Logs, libraries and databases #
 ######################
 *.log
-log/
+/log/
+/lib/
 
 # OS generated files #
 ######################
