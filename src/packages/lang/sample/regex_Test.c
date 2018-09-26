@@ -329,8 +329,8 @@ int main(int argc, char **argv) {
 
   __initExceptionSignals();
 
- /* testRegEx();*/
-  testRegEx2();
+  testRegEx();
+  //testRegEx2();
 
   System.out.println("Done");
 
